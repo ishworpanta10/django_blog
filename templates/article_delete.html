@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <h1>Delete article</h1>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+
+        <div class="alert alert-danger" role="alert">
+            <h3>Warning !!!</h3>
+            Are you sure to delete : {{details_doc.title}}
+            <hr>
+            <div>
+                <span><button class="btn btn-danger" type="submit">Ok</button></span>
+                <span><a href="{% url 'home'%}"><button class="btn btn-warning">Cancel</button></a></span>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+{% endblock %}

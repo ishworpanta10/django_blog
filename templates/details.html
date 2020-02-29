@@ -17,7 +17,8 @@
             <a href="{% url 'article_edit' details_doc.pk %}"><button class="btn btn-info">Edit this post</button></a>
         </span>
         <span>
-            <a href=""><button class="btn btn-danger">Delete this post</button></a>
+            <a href="{% url 'article_delete' details_doc.pk %}"><button class="btn btn-danger">Delete this
+                    post</button></a>
         </span>
 
         <hr>

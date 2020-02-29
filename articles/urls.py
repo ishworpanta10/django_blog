@@ -12,4 +12,6 @@ urlpatterns = [
          views.ArticleAllView.as_view(), name='article_all'),
     path('article/<int:pk>/edit',
          views.ArticleUpdateView.as_view(), name='article_edit'),
+    path('article/<int:pk>/delete',
+         views.ArticleDeleteView.as_view(), name='article_delete'),
 ]
