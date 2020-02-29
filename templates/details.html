@@ -12,6 +12,15 @@
     <div class="card-body">
         <h4 class="card-title">{{details_doc.title }}</h4>
         <p class="card-text">{{details_doc.text}}</p>
+        <hr>
+        <span>
+            <a href="{% url 'article_edit' details_doc.pk %}"><button class="btn btn-info">Edit this post</button></a>
+        </span>
+        <span>
+            <a href=""><button class="btn btn-danger">Delete this post</button></a>
+        </span>
+
+        <hr>
         <p class="card-text"><small class="text-muted">Last updated {{details_doc.date_added}} </small></p>
     </div>
 </div>

@@ -10,4 +10,6 @@ urlpatterns = [
          views.ArticleCreateView.as_view(), name='article_new'),
     path('article/all_news/',
          views.ArticleAllView.as_view(), name='article_all'),
+    path('article/<int:pk>/edit',
+         views.ArticleUpdateView.as_view(), name='article_edit'),
 ]

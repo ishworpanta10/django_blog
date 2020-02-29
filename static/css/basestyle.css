@@ -1,0 +1,8 @@
+span {
+    display: inline-block; /* change the display type           */
+    margin: 20px ;        /* apply the needed vertical margins */
+}
+
+body{
+    background-color: lavender;
+}
