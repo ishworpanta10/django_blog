@@ -5,8 +5,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/basestyle.css' %}">
@@ -14,15 +14,36 @@
 </head>
 
 <body>
-    <header>
-        <h1><a href="/">My Personal Blog</a></h1>
-    </header>
+
+    <!--navbar-->
+    <div class="container">
+        <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"> -->
+        <nav class="navbar navbar-expand-lg bg-priary" style="background-color: #e3f2fd;">
+            <a class="navbar-brand" href="{% url 'home' %}">Ishwor Blog</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="{% url 'home' %}">Home <span
+                            class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="{% url 'article_all' %}">News</a>
+
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+
 
     <div class="container">
         {% block content %}
 
         {% endblock %}
     </div>
+
 </body>
 
 </html>
